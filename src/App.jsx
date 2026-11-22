@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
+import Catalog from './pages/Catalog'
 import Placeholder from './pages/Placeholder'
 
 export default function App() {
@@ -8,7 +9,7 @@ export default function App() {
       <Routes>
             <Route element={<Layout />}>
                     <Route path="/" element={<Home />} />
-                            <Route path="/katalog" element={<Placeholder title="Katalog Produk" />} />
+                            <Route path="/katalog" element={<Catalog />} />
                                     <Route path="/produk/:slug" element={<Placeholder title="Detail Produk" />} />
                                             <Route path="/promo" element={<Placeholder title="Cashback & Promo" />} />
                                                     <Route path="/claim" element={<Placeholder title="Ajukan Cashback Anda" />} />
