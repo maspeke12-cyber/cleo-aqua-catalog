@@ -10,11 +10,11 @@ export const SITE = {
             }
 
             export const MENU = [
-              { label: 'Beranda', to: '/' },
-                { label: 'Katalog', to: '/katalog' },
-                  { label: 'Cashback & Promo', to: '/promo' },
-                    { label: 'Claim Cashback', to: '/claim' },
-                      { label: 'Cek Status Klaim', to: '/status' },
-                        { label: 'Pembiayaan / Kredit', to: '/kredit' },
-                          { label: 'Hubungi Kami', to: '/kontak' },
+              { label: 'Beranda', short: 'Beranda', to: '/' },
+                { label: 'Katalog', short: 'Katalog', to: '/katalog' },
+                  { label: 'Cashback & Promo', short: 'Promo', to: '/promo' },
+                    { label: 'Claim Cashback', short: 'Klaim', to: '/claim' },
+                      { label: 'Cek Status Klaim', short: 'Status', to: '/status' },
+                        { label: 'Pembiayaan / Kredit', short: 'Kredit', to: '/kredit' },
+                          { label: 'Hubungi Kami', short: 'Kontak', to: '/kontak' },
                           ]

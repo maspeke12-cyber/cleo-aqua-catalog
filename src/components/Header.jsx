@@ -10,7 +10,7 @@ export default function Header() {
     return (
         <header className="sticky top-0 z-40 border-b border-aqua-light bg-white">
               <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4">
-                      <Link to="/" onClick={() => setOpen(false)} className="min-w-0">
+                      <Link to="/" onClick={() => setOpen(false)} className="min-w-0 shrink-0">
                                 {/* PLACEHOLDER LOGO. Nanti diganti file logo resmi di public/logos */}
                                           <p className="text-lg font-extrabold leading-none tracking-wide text-navy">
                                                       AQUA
@@ -21,7 +21,7 @@ export default function Header() {
                                                                                                                 <p className="mt-1 truncate text-xs text-slate-soft">{SITE.storeName}</p>
                                                                                                                         </Link>
 
-                                                                                                                                {/* Menu desktop */}
+                                                                                                                                {/* Menu desktop dan tablet lebar */}
                                                                                                                                         <nav className="hidden items-center gap-1 lg:flex">
                                                                                                                                                   {MENU.map((item) => (
                                                                                                                                                               <NavLink
@@ -29,14 +29,14 @@ export default function Header() {
                                                                                                                                                                                           to={item.to}
                                                                                                                                                                                                         end={item.to === '/'}
                                                                                                                                                                                                                       className={({ isActive }) =>
-                                                                                                                                                                                                                                      `rounded-xl px-3 py-2 text-sm font-semibold transition ${
+                                                                                                                                                                                                                                      `whitespace-nowrap rounded-xl px-3 py-2 text-sm font-semibold transition ${
                                                                                                                                                                                                                                                         isActive
                                                                                                                                                                                                                                                                             ? 'bg-aqua-light text-aqua'
                                                                                                                                                                                                                                                                                                 : 'text-navy hover:bg-aqua-light'
                                                                                                                                                                                                                                                                                                                 }`
                                                                                                                                                                                                                                                                                                                               }
                                                                                                                                                                                                                                                                                                                                           >
-                                                                                                                                                                                                                                                                                                                                                        {item.label}
+                                                                                                                                                                                                                                                                                                                                                        {item.short}
                                                                                                                                                                                                                                                                                                                                                                     </NavLink>
                                                                                                                                                                                                                                                                                                                                                                               ))}
                                                                                                                                                                                                                                                                                                                                                                                       </nav>
